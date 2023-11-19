@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let deleteButton = document.getElementById('dltbtn');
 
     function getUsers() {
-        fetch('http://localhost:3000/womans')
+        fetch('http://localhost:3001/womans')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     console.log(userIdToDelete)
 
                     try {
-                        const response = await fetch(`http://localhost:3000/womans/${userIdToDelete}`, {
+                        const response = await fetch(`http://localhost:3001/womans/${userIdToDelete}`, {
                             method: 'DELETE',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const password = document.getElementById('password').value;
 
         // Make a POST request to your server
-        fetch('http://localhost:3000/login', {
+        fetch('http://localhost:3001/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const newHome = document.getElementById('newHome');
             const newPayment = document.getElementById('newPayment');
 
-            fetch('http://localhost:3000/womans', {
+            fetch('http://localhost:3001/womans', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -315,7 +315,7 @@ greenButton.addEventListener('click', function () {
         const newHome = document.getElementById('registerHome');
         const newPayment = '';
 
-        fetch('http://localhost:3000/womans', {
+        fetch('http://localhost:3001/womans', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
