@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const { MongoClient } = require('mongodb');
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 // Middleware to parse JSON requests
 app.use(bodyParser.json());
